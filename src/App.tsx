@@ -1,53 +1,132 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import { Route, Redirect } from 'react-router-dom';
 
-/* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
-/* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+/* Auth */
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 
-/* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+/* Paciente */
+import HomePaciente from './pages/paciente/HomePaciente';
+import Agendar from './pages/paciente/Agendar';
+import Historial from './pages/paciente/Historial';
+import RecetasPaciente from './pages/paciente/RecetasPaciente';
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
+/* Médico */
+import HomeMedico from './pages/medico/HomeMedico';
+import Consultas from './pages/medico/Consultas';
+import Pacientes from './pages/medico/Pacientes';
+import RecetasMedico from './pages/medico/RecetasMedico';
 
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+/* Admin */
+import Dashboard from './pages/admin/Dashboard';
+import Usuarios from './pages/admin/Usuarios';
+import Especialidades from './pages/admin/Especialidades';
 
-/* Theme variables */
-import './theme/variables.css';
+/* Protected Route */
+import ProtectedRoute from './routes/ProtectedRoute';
 
-setupIonicReact();
+const App: React.FC = () => {
+  return (
+    <IonApp>
+      <IonReactRouter>
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+        <IonRouterOutlet>
+
+          {/* Públicas */}
+          <Route path="/login" component={Login} exact />
+          <Route path="/register" component={Register} exact />
+
+          {/* Paciente */}
+          <ProtectedRoute
+            path="/paciente/home"
+            component={HomePaciente}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/agendar"
+            component={Agendar}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/historial"
+            component={Historial}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/recetas"
+            component={RecetasPaciente}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          {/* Médico */}
+          <ProtectedRoute
+            path="/medico/home"
+            component={HomeMedico}
+            exact
+            allowedRoles={['medico']}
+          />
+
+          <ProtectedRoute
+            path="/medico/consultas"
+            component={Consultas}
+            exact
+            allowedRoles={['medico']}
+          />
+
+          <ProtectedRoute
+            path="/medico/pacientes"
+            component={Pacientes}
+            exact
+            allowedRoles={['medico']}
+          />
+
+          <ProtectedRoute
+            path="/medico/recetas"
+            component={RecetasMedico}
+            exact
+            allowedRoles={['medico']}
+          />
+
+          {/* Admin */}
+          <ProtectedRoute
+            path="/admin/dashboard"
+            component={Dashboard}
+            exact
+            allowedRoles={['admin']}
+          />
+
+          <ProtectedRoute
+            path="/admin/usuarios"
+            component={Usuarios}
+            exact
+            allowedRoles={['admin']}
+          />
+
+          <ProtectedRoute
+            path="/admin/especialidades"
+            component={Especialidades}
+            exact
+            allowedRoles={['admin']}
+          />
+
+          {/* Redirección inicial */}
+          <Redirect exact from="/" to="/login" />
+
+        </IonRouterOutlet>
+
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;

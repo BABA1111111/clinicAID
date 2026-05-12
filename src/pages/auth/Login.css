@@ -1,0 +1,77 @@
+.login-content {
+  --background: #ffffff;
+}
+
+.login-container {
+  padding: 48px 28px;
+  text-align: center;
+}
+
+.login-logo {
+  text-align: left;
+  color: #67f3e5;
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 70px;
+}
+
+.login-logo span {
+  color: #009e8e;
+  margin-left: 4px;
+  font-family: 'Jaro', sans-serif;
+}
+
+.login-container h1 {
+  color: #009e8e;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-input {
+  --background: #ffffff;
+  --border-color: #cfcfcf;
+  --border-radius: 6px;
+  --padding-start: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  color: #009e8e;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.main-button {
+  --background: #009e8e;
+  --border-radius: 0;
+  height: 54px;
+  font-weight: bold;
+}
+
+.register-text {
+  margin-top: 28px;
+  color: #777;
+  font-size: 14px;
+}
+
+.register-text span {
+  color: #67cfc6;
+  cursor: pointer;
+}
+
+.role-buttons {
+  margin-top: 40px;
+}
+
+.role-buttons p {
+  color: #777;
+  font-size: 13px;
+}
