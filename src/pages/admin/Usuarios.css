@@ -1,0 +1,179 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #8df5e8;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: #009e8e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.admin-sidebar h1 {
+  font-size: 52px;
+  margin: 0 0 40px 40px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 36px;
+  font-size: 20px;
+}
+
+.sidebar-item ion-icon {
+  font-size: 24px;
+}
+
+.sidebar-item.active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-logo {
+  margin-top: auto;
+  padding: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.admin-main {
+  flex: 1;
+}
+
+.admin-header {
+  height: 95px;
+  background: #d9fff8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.admin-header h2 {
+  color: #009e8e;
+  font-size: 32px;
+  margin: 0;
+}
+
+.profile-icon {
+  font-size: 64px;
+  color: #009e8e;
+}
+
+.admin-content {
+  padding: 45px;
+}
+
+.summary-card {
+  width: 380px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #009e8e;
+  font-size: 22px;
+  margin-bottom: 70px;
+}
+
+.summary-card ion-icon {
+  font-size: 48px;
+}
+
+.actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.filter-button {
+  --background: white;
+  --color: #777;
+  background: white;
+  border-radius: 10px;
+  height: 48px;
+}
+
+.add-button {
+  --background: #009e8e;
+  --border-radius: 10px;
+  height: 48px;
+}
+
+.searchbar {
+  width: 300px;
+  margin-left: auto;
+  --background: white;
+  --border-radius: 10px;
+}
+
+.users-table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr 1fr 140px;
+  align-items: center;
+  padding: 22px 30px;
+}
+
+.table-header {
+  background: #ece8e8;
+  color: #777;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.table-row {
+  border-top: 1px solid #ccc;
+  font-size: 20px;
+  color: #111;
+}
+
+.table-row input {
+  width: 26px;
+  height: 26px;
+}
+
+.row-actions {
+  display: flex;
+  gap: 28px;
+  color: #7a8582;
+  font-size: 28px;
+}
+
+.error-message {
+  background: #ffe0e0;
+  color: #b00020;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.user-form {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.user-form ion-input,
+.user-form ion-select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  --padding-start: 12px;
+}
