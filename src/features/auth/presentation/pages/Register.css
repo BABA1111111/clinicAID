@@ -1,0 +1,112 @@
+.register-content {
+  --background: #ffffff;
+}
+
+.register-container {
+  min-height: 100vh;
+  font-size: 15px;
+  padding: clamp(24px, 6vw, 48px) 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #009e8e;
+}
+
+.register-logo {
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  color: #67f3e5;
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.register-logo span {
+  color: #009e8e;
+  margin-left: 4px;
+  font-family: 'Jaro', sans-serif;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 34px;
+}
+
+.register-form {
+  width: min(90vw, 520px);
+}
+
+.register-input {
+  --background: #ffffff;
+  --border-color: #cfcfcf;
+  --border-radius: 6px;
+  --inner-border-width: 0;
+  --padding-start: 14px;
+
+  margin-bottom: 14px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.register-input ion-input,
+.register-input ion-select {
+  font-weight: 500;
+  color: #555;
+}
+
+.register-input::part(native) {
+  padding-left: 5;
+}
+
+.register-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 14px 0 22px;
+  text-align: left;
+
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.register-terms ion-checkbox {
+  --checkbox-background-checked: #009e8e;
+  --border-color-checked: #009e8e;
+}
+
+.register-error {
+  font-size: 15px;
+  margin: 10px 0 10px;
+  text-align: center;
+  color: #d60000;
+  font-weight: 500;
+}
+
+.register-button {
+  --background: #009e8e;
+  --border-radius: 0;
+
+  height: 58px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.register-text {
+  margin-top: 28px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.register-text span {
+  color: #67cfc6;
+  cursor: pointer;
+}

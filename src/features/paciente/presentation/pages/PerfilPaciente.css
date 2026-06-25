@@ -1,0 +1,421 @@
+.perfil-paciente-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.perfil-paciente-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.perfil-paciente-container {
+  min-height: 100vh;
+  padding: 24px 24px 120px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.perfil-paciente-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.perfil-paciente-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.perfil-paciente-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.perfil-paciente-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.perfil-paciente-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.perfil-paciente-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Título */
+
+.perfil-title-section {
+  margin-top: 34px;
+  margin-bottom: 22px;
+}
+
+.perfil-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Card principal */
+
+.perfil-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 18px;
+  padding: 32px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+}
+
+.perfil-avatar {
+  width: 96px;
+  height: 96px;
+  background: #ffffff;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 128, 115, 0.12);
+}
+
+.perfil-avatar ion-icon {
+  font-size: 72px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.perfil-card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-text, #174c47);
+}
+
+.perfil-card p {
+  margin: 6px 0 18px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.perfil-edit-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 40px;
+  min-width: 150px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Información personal */
+
+.perfil-info-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  padding: 26px 30px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.08);
+}
+
+.perfil-info-card h3 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.perfil-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.perfil-info-item:last-child {
+  border-bottom: none;
+}
+
+.perfil-info-item ion-icon {
+  font-size: 24px;
+  color: var(--clinic-primary, #00a896);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.perfil-info-item span {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--clinic-muted, #6b7c7a);
+}
+
+.perfil-info-item p {
+  margin: 4px 0 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--clinic-text, #174c47);
+}
+
+/* Acciones */
+
+.perfil-actions-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+
+  background: #ffffff;
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  padding: 22px 30px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.06);
+}
+
+.perfil-logout-button {
+  --background: var(--clinic-danger, #d9534f);
+  --background-hover: #c64541;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Espacio inferior */
+
+.perfil-paciente-bottom-space {
+  height: 130px;
+}
+
+/* Bottom nav */
+
+.perfil-paciente-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.perfil-paciente-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.perfil-paciente-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.perfil-paciente-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.perfil-paciente-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .perfil-paciente-container {
+    padding: 20px 18px 120px;
+    max-width: 100%;
+  }
+
+  .perfil-title-section h1 {
+    font-size: 24px;
+  }
+
+  .perfil-card,
+  .perfil-info-card,
+  .perfil-actions-card {
+    max-width: 100%;
+  }
+
+  .perfil-card {
+    padding: 28px 24px;
+  }
+
+  .perfil-info-card {
+    padding: 24px 24px;
+  }
+
+  .perfil-paciente-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .perfil-paciente-container {
+    padding: 18px 16px 120px;
+  }
+
+  .perfil-paciente-logo {
+    font-size: 22px;
+  }
+
+  .perfil-paciente-logo span {
+    font-size: 25px;
+  }
+
+  .perfil-paciente-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .perfil-title-section {
+    margin-top: 30px;
+  }
+
+  .perfil-title-section h1 {
+    font-size: 22px;
+  }
+
+  .perfil-card {
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+
+  .perfil-avatar {
+    width: 84px;
+    height: 84px;
+  }
+
+  .perfil-avatar ion-icon {
+    font-size: 64px;
+  }
+
+  .perfil-card h2 {
+    font-size: 21px;
+  }
+
+  .perfil-info-card {
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .perfil-info-card h3 {
+    font-size: 21px;
+  }
+
+  .perfil-info-item {
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .perfil-info-item ion-icon {
+    font-size: 22px;
+  }
+
+  .perfil-info-item span {
+    font-size: 13px;
+  }
+
+  .perfil-info-item p {
+    font-size: 14px;
+  }
+
+  .perfil-actions-card {
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .perfil-paciente-nav-item {
+    font-size: 11px;
+  }
+
+  .perfil-paciente-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .perfil-title-section h1 {
+    font-size: 21px;
+  }
+
+  .perfil-card h2 {
+    font-size: 19px;
+  }
+
+  .perfil-info-card h3 {
+    font-size: 20px;
+  }
+
+  .perfil-paciente-nav-item {
+    font-size: 10px;
+  }
+
+  .perfil-paciente-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

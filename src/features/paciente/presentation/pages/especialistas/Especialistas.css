@@ -1,0 +1,473 @@
+.especialistas-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.especialistas-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.especialistas-container {
+  min-height: 100vh;
+  padding: 24px 24px 120px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.especialistas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.especialistas-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.especialistas-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.especialistas-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.especialistas-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.especialistas-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Título */
+
+.especialistas-title-section {
+  margin-top: 34px;
+  margin-bottom: 20px;
+}
+
+.especialistas-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Filtros */
+
+.especialistas-filters-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 128, 115, 0.08);
+}
+
+.especialistas-search-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 54px;
+  padding: 0 20px;
+  background: #eeeeee;
+  border-bottom: 3px solid #ffffff;
+  color: #111111;
+}
+
+.especialistas-search-box ion-icon {
+  font-size: 26px;
+  color: #111111;
+}
+
+.especialistas-search-input {
+  --color: #333333;
+  --placeholder-color: #777777;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.especialistas-filter-option {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: #eeeeee;
+}
+
+.especialistas-filter-option.active {
+  background: #dcdcdc;
+  margin: 0 14px 12px;
+  border-radius: 10px;
+}
+
+.especialistas-filter-option ion-select {
+  width: 100%;
+  color: #666666;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Lista */
+
+.especialistas-list {
+  width: 100%;
+  max-width: 1000px;
+  margin: 42px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card especialista */
+
+.especialista-card {
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 18px;
+  padding: 26px 30px;
+
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 22px;
+  align-items: center;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+  transition: 0.2s ease;
+}
+
+.especialista-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 128, 115, 0.16);
+}
+
+.especialista-img {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 12px rgba(0, 128, 115, 0.14);
+}
+
+.especialista-info {
+  color: var(--clinic-text, #174c47);
+}
+
+.especialista-info h2 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-text, #174c47);
+}
+
+.especialista-info h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.especialista-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.especialista-rating ion-icon {
+  font-size: 18px;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.especialista-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.especialista-detail ion-icon {
+  font-size: 18px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.especialista-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 130px;
+}
+
+.especialista-profile-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --background: transparent;
+  --border-radius: 10px;
+
+  height: 40px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.especialista-schedule-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 40px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Espacio inferior */
+
+.especialistas-bottom-space {
+  height: 130px;
+}
+
+/* Bottom nav */
+
+.especialistas-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.especialistas-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.especialistas-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.especialistas-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.especialistas-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .especialistas-container {
+    padding: 20px 18px 120px;
+    max-width: 100%;
+  }
+
+  .especialistas-title-section h1 {
+    font-size: 24px;
+  }
+
+  .especialistas-filters-card,
+  .especialistas-list {
+    max-width: 100%;
+  }
+
+  .especialista-card {
+    grid-template-columns: 80px 1fr;
+    gap: 18px;
+    padding: 24px 24px;
+  }
+
+  .especialista-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .especialista-profile-button,
+  .especialista-schedule-button {
+    flex: 1;
+  }
+
+  .especialistas-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .especialistas-container {
+    padding: 18px 16px 120px;
+  }
+
+  .especialistas-logo {
+    font-size: 22px;
+  }
+
+  .especialistas-logo span {
+    font-size: 25px;
+  }
+
+  .especialistas-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .especialistas-title-section {
+    margin-top: 30px;
+  }
+
+  .especialistas-title-section h1 {
+    font-size: 22px;
+  }
+
+  .especialistas-filters-card {
+    border-radius: 12px;
+  }
+
+  .especialistas-search-box {
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .especialistas-filter-option {
+    min-height: 54px;
+    padding: 0 16px;
+  }
+
+  .especialistas-filter-option.active {
+    margin: 0 10px 10px;
+  }
+
+  .especialistas-list {
+    margin-top: 34px;
+    gap: 18px;
+  }
+
+  .especialista-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .especialista-img {
+    justify-self: center;
+    width: 92px;
+    height: 92px;
+  }
+
+  .especialista-info h2 {
+    font-size: 21px;
+  }
+
+  .especialista-info h3 {
+    font-size: 17px;
+  }
+
+  .especialista-rating,
+  .especialista-detail {
+    justify-content: center;
+  }
+
+  .especialista-detail {
+    font-size: 14px;
+  }
+
+  .especialista-actions {
+    flex-direction: column;
+  }
+
+  .especialista-profile-button,
+  .especialista-schedule-button {
+    width: 100%;
+  }
+
+  .especialistas-nav-item {
+    font-size: 11px;
+  }
+
+  .especialistas-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .especialistas-title-section h1 {
+    font-size: 21px;
+  }
+
+  .especialista-card {
+    padding: 22px 18px;
+  }
+
+  .especialista-info h2 {
+    font-size: 19px;
+  }
+
+  .especialista-detail {
+    font-size: 13px;
+  }
+
+  .especialistas-nav-item {
+    font-size: 10px;
+  }
+
+  .especialistas-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

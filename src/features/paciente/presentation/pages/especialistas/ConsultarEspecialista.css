@@ -1,0 +1,472 @@
+.consultar-especialista-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.consultar-especialista-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.consultar-especialista-container {
+  min-height: 100vh;
+  padding: 24px 24px 120px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.consultar-especialista-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.consultar-especialista-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.consultar-especialista-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.consultar-especialista-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.consultar-especialista-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.consultar-especialista-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Volver */
+
+.consultar-especialista-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 22px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.consultar-especialista-back ion-icon {
+  font-size: 22px;
+}
+
+.consultar-especialista-back:hover {
+  color: var(--clinic-primary, #00a896);
+  transform: translateX(-2px);
+}
+
+/* Título */
+
+.consultar-especialista-title-section {
+  margin-top: 24px;
+  margin-bottom: 22px;
+}
+
+.consultar-especialista-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.consultar-especialista-title-section p {
+  margin: 6px 0 0;
+  color: var(--clinic-muted, #6b7c7a);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Perfil especialista */
+
+.consultar-especialista-profile-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 22px;
+
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 18px;
+  padding: 22px 26px;
+
+  display: grid;
+  grid-template-columns: 78px 1fr auto;
+  align-items: center;
+  gap: 18px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+}
+
+.consultar-especialista-img {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+}
+
+.consultar-especialista-profile-info h2 {
+  margin: 0 0 3px;
+  color: var(--clinic-text, #174c47);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.consultar-especialista-profile-info p {
+  margin: 0 0 6px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.consultar-especialista-profile-info span {
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.consultar-especialista-profile-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.consultar-especialista-action-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --background: rgba(255, 255, 255, 0.35);
+  --border-radius: 50%;
+
+  width: 44px;
+  height: 44px;
+}
+
+/* Chat */
+
+.consultar-chat-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.08);
+}
+
+.consultar-chat-header {
+  padding: 20px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consultar-chat-header h2 {
+  margin: 0;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.consultar-chat-header p {
+  margin: 5px 0 0;
+  color: var(--clinic-muted, #6b7c7a);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.consultar-chat-header ion-icon {
+  font-size: 34px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.consultar-chat-messages {
+  min-height: 360px;
+  max-height: 460px;
+  overflow-y: auto;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.consultar-message {
+  max-width: 70%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 128, 115, 0.08);
+}
+
+.consultar-message p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.consultar-message span {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.consultar-message-especialista {
+  align-self: flex-start;
+  background: #ffffff;
+  color: var(--clinic-text, #174c47);
+  border-bottom-left-radius: 4px;
+}
+
+.consultar-message-paciente {
+  align-self: flex-end;
+  background: var(--clinic-primary-dark, #007f73);
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.consultar-chat-input-row {
+  padding: 16px 18px;
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.consultar-chat-input {
+  --background: var(--clinic-surface, #f5f7f7);
+  --color: var(--clinic-text, #174c47);
+  --placeholder-color: var(--clinic-muted, #6b7c7a);
+  --padding-start: 16px;
+  --padding-end: 16px;
+
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 12px;
+  font-weight: 700;
+  min-height: 44px;
+}
+
+.consultar-send-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 50%;
+
+  width: 46px;
+  height: 46px;
+}
+
+/* Espacio inferior */
+
+.consultar-especialista-bottom-space {
+  height: 130px;
+}
+
+/* Bottom nav */
+
+.consultar-especialista-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.consultar-especialista-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.consultar-especialista-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.consultar-especialista-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.consultar-especialista-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .consultar-especialista-container {
+    padding: 20px 18px 120px;
+    max-width: 100%;
+  }
+
+  .consultar-especialista-title-section h1 {
+    font-size: 24px;
+  }
+
+  .consultar-especialista-profile-card,
+  .consultar-chat-card {
+    max-width: 100%;
+  }
+
+  .consultar-especialista-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .consultar-especialista-container {
+    padding: 18px 16px 120px;
+  }
+
+  .consultar-especialista-logo {
+    font-size: 22px;
+  }
+
+  .consultar-especialista-logo span {
+    font-size: 25px;
+  }
+
+  .consultar-especialista-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .consultar-especialista-title-section h1 {
+    font-size: 22px;
+  }
+
+  .consultar-especialista-title-section p {
+    font-size: 14px;
+  }
+
+  .consultar-especialista-profile-card {
+    grid-template-columns: 64px 1fr;
+    padding: 18px 18px;
+    border-radius: 16px;
+  }
+
+  .consultar-especialista-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .consultar-especialista-profile-info h2 {
+    font-size: 19px;
+  }
+
+  .consultar-especialista-profile-info p {
+    font-size: 15px;
+  }
+
+  .consultar-especialista-profile-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .consultar-chat-header {
+    padding: 18px 18px;
+  }
+
+  .consultar-chat-header h2 {
+    font-size: 20px;
+  }
+
+  .consultar-chat-header p {
+    font-size: 13px;
+  }
+
+  .consultar-chat-messages {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .consultar-message {
+    max-width: 86%;
+  }
+
+  .consultar-message p {
+    font-size: 14px;
+  }
+
+  .consultar-chat-input-row {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .consultar-send-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .consultar-especialista-nav-item {
+    font-size: 11px;
+  }
+
+  .consultar-especialista-nav-item ion-icon {
+    font-size: 27px;
+  }
+}

@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+}
+
+.home-paciente-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.home-paciente-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.home-paciente-container {
+  min-height: 100vh;
+  padding: 24px 24px 110px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+  position: relative;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.home-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.home-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.home-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.home-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.home-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Welcome */
+
+.welcome-section {
+  margin-top: 34px;
+  margin-bottom: 48px;
+}
+
+.welcome-section h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Próxima cita */
+
+.next-appointment-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+}
+
+.appointment-header {
+  background: var(--clinic-primary, #00a896);
+  color: #ffffff;
+  padding: 14px 26px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.appointment-body {
+  padding: 28px 32px;
+}
+
+.appointment-body h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--clinic-text, #174c47);
+}
+
+.appointment-body p {
+  margin: 3px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.appointment-actions ion-button {
+  display: block;
+}
+
+/* Botones de cita */
+
+.join-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+  min-width: 120px;
+}
+
+.details-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --border-radius: 10px;
+  --background: transparent;
+
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+  min-width: 120px;
+}
+
+.cancel-appointment-button {
+  --border-color: var(--clinic-danger, #d9534f);
+  --color: var(--clinic-danger, #d9534f);
+  --border-radius: 10px;
+  --background: var(--clinic-danger-soft, #fff0ef);
+
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+  min-width: 120px;
+}
+
+/* Cuando no hay cita */
+
+.no-appointment-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  padding: 30px 34px;
+  box-shadow: 0 4px 12px rgba(0, 158, 142, 0.1);
+}
+
+.no-appointment-card h2 {
+  margin: 0 0 8px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.no-appointment-card p {
+  margin: 0 0 18px;
+  color: var(--clinic-muted, #6b7c7a);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.go-schedule-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Especialistas */
+
+.specialists-section {
+  margin-top: 48px;
+}
+
+.specialists-section h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.specialists-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+}
+
+.specialist-card {
+  width: 160px;
+  height: 220px;
+  background: var(--clinic-primary-soft, #d9f8f4);
+  border: 1px solid #bde8e2;
+  border-radius: 16px;
+  padding: 18px 14px 14px;
+  text-align: center;
+  color: var(--clinic-text, #174c47);
+  opacity: 0.78;
+  transform: scale(0.94);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 128, 115, 0.1);
+}
+
+.specialist-card.active {
+  width: 190px;
+  height: 245px;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  box-shadow: 0 8px 20px rgba(0, 128, 115, 0.18);
+}
+
+.specialist-card:hover {
+  transform: scale(0.98);
+}
+
+.specialist-card.active:hover {
+  transform: scale(1.02);
+}
+
+.specialist-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.specialist-card.active .specialist-img {
+  width: 88px;
+  height: 88px;
+}
+
+.specialist-card h3 {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--clinic-text, #174c47);
+}
+
+.specialist-card.active h3 {
+  font-size: 17px;
+}
+
+.specialist-card p {
+  margin: 4px 0 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.specialist-card span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--clinic-primary-dark, #007f73);
+  margin-bottom: 10px;
+}
+
+.see-more-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 8px;
+
+  height: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* Dots carrusel */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  background: #91d8d1;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.carousel-dots button:hover {
+  background: var(--clinic-primary, #00a896);
+  transform: scale(1.15);
+}
+
+.carousel-dots .active-dot {
+  background: var(--clinic-primary-dark, #007f73);
+  transform: scale(1.25);
+}
+
+/* Bottom nav */
+
+.bottom-space {
+  height: 110px;
+}
+
+.home-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.home-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.home-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.home-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.home-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet y móvil horizontal */
+
+@media (max-width: 768px) {
+  .home-paciente-container {
+    padding: 20px 18px 110px;
+    max-width: 100%;
+  }
+
+  .home-header {
+    width: 100%;
+  }
+
+  .home-logo {
+    font-size: 24px;
+  }
+
+  .home-icons {
+    font-size: 28px;
+    gap: 14px;
+  }
+
+  .welcome-section {
+    margin-top: 32px;
+    margin-bottom: 38px;
+  }
+
+  .welcome-section h1 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .next-appointment-card,
+  .no-appointment-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .appointment-header {
+    padding: 13px 22px;
+  }
+
+  .appointment-body {
+    padding: 24px 22px;
+  }
+
+  .appointment-body h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .appointment-body p {
+    font-size: 14px;
+  }
+
+  .appointment-actions {
+    gap: 10px;
+  }
+
+  .join-button,
+  .details-button,
+  .cancel-appointment-button {
+    min-width: auto;
+    width: auto;
+    height: 38px;
+    font-size: 12px;
+  }
+
+  .specialists-section {
+    margin-top: 42px;
+  }
+
+  .specialists-section h2 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .specialists-carousel {
+    justify-content: flex-start;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px 4px 14px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .specialists-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .specialist-card,
+  .specialist-card.active {
+    flex: 0 0 165px;
+    width: 165px;
+    height: 220px;
+    transform: none;
+    scroll-snap-align: center;
+  }
+
+  .specialist-card.active {
+    height: 230px;
+    border: 1px solid var(--clinic-primary, #00a896);
+    box-shadow: 0 8px 20px rgba(0, 128, 115, 0.16);
+  }
+
+  .specialist-card:hover,
+  .specialist-card.active:hover {
+    transform: none;
+  }
+
+  .home-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .home-paciente-container {
+    padding: 18px 16px 110px;
+  }
+
+  .home-logo {
+    font-size: 22px;
+  }
+
+  .home-logo span {
+    font-size: 25px;
+  }
+
+  .home-icons {
+    font-size: 26px;
+  }
+
+  .welcome-section h1 {
+    font-size: 21px;
+  }
+
+  .appointment-body {
+    padding: 22px 20px;
+  }
+
+  .appointment-body h2 {
+    font-size: 18px;
+  }
+
+  .appointment-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .join-button,
+  .details-button,
+  .cancel-appointment-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .cancel-appointment-button {
+    grid-column: span 2;
+  }
+
+  .specialists-section h2 {
+    font-size: 21px;
+  }
+
+  .specialist-card,
+  .specialist-card.active {
+    flex: 0 0 150px;
+    width: 150px;
+  }
+
+  .home-nav-item {
+    font-size: 11px;
+  }
+
+  .home-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .appointment-body {
+    padding: 20px 18px;
+  }
+
+  .appointment-body h2 {
+    font-size: 17px;
+  }
+
+  .appointment-body p {
+    font-size: 13px;
+  }
+
+  .specialists-section h2 {
+    font-size: 20px;
+  }
+
+  .specialist-card,
+  .specialist-card.active {
+    flex: 0 0 140px;
+    width: 140px;
+  }
+
+  .home-nav-item {
+    font-size: 10px;
+  }
+
+  .home-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

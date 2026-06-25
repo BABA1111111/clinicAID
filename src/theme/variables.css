@@ -1,2 +1,17 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+:root {
+  --clinic-primary: #00a896;
+  --clinic-primary-dark: #007f73;
+  --clinic-primary-soft: #d9f8f4;
+  --clinic-primary-card: #bff3ec;
+  --clinic-accent: #67e8dc;
+
+  --clinic-bg: #ffffff;
+  --clinic-surface: #f5f7f7;
+  --clinic-border: #d7e4e2;
+
+  --clinic-text: #174c47;
+  --clinic-muted: #6b7c7a;
+
+  --clinic-danger: #d9534f;
+  --clinic-danger-soft: #fff0ef;
+}

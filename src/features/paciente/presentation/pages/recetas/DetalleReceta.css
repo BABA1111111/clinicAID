@@ -1,0 +1,467 @@
+.detalle-receta-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.detalle-receta-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.detalle-receta-container {
+  min-height: 100vh;
+  padding: 24px 24px 110px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.detalle-receta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.detalle-receta-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.detalle-receta-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.detalle-receta-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.detalle-receta-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detalle-receta-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Botón volver */
+
+.detalle-receta-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  background: transparent;
+  border: none;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.detalle-receta-back ion-icon {
+  font-size: 22px;
+}
+
+/* Título */
+
+.detalle-receta-title-section {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.detalle-receta-title-section h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Tarjeta principal */
+
+.detalle-receta-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  padding: 28px 30px;
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.1);
+}
+
+.detalle-receta-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.detalle-receta-card-title h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-primary, #00a896);
+}
+
+.detalle-receta-card-title p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5d6c6a;
+}
+
+.detalle-receta-status {
+  display: inline-block;
+  background: var(--clinic-primary-dark, #007f73);
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Bloques de información */
+
+.detalle-receta-section {
+  padding: 18px 0;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.detalle-receta-section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.detalle-receta-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.detalle-receta-row:last-child {
+  margin-bottom: 0;
+}
+
+.detalle-receta-row ion-icon {
+  font-size: 24px;
+  color: var(--clinic-primary, #00a896);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.detalle-receta-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detalle-receta-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #6b7c7a;
+}
+
+.detalle-receta-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--clinic-text, #174c47);
+}
+
+/* Firma y QR */
+
+.detalle-receta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+  margin-top: 10px;
+}
+
+.detalle-receta-signature h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--clinic-text, #174c47);
+}
+
+.detalle-receta-signature p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--clinic-primary, #00a896);
+}
+
+.detalle-receta-signature ion-icon {
+  font-size: 22px;
+}
+
+.detalle-receta-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.detalle-receta-qr ion-icon {
+  font-size: 64px;
+  color: #000000;
+}
+
+.detalle-receta-qr span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7c7a;
+}
+
+/* Botones */
+
+.detalle-receta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.detalle-receta-download-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+  min-width: 150px;
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.detalle-receta-share-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --border-radius: 10px;
+  --background: transparent;
+  min-width: 150px;
+  height: 42px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Espacio inferior */
+
+.detalle-receta-bottom-space {
+  height: 120px;
+}
+
+/* Bottom nav */
+
+.detalle-receta-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+}
+
+.detalle-receta-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.detalle-receta-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.detalle-receta-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.detalle-receta-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .detalle-receta-container {
+    padding: 20px 18px 110px;
+    max-width: 100%;
+  }
+
+  .detalle-receta-title-section h1 {
+    font-size: 24px;
+  }
+
+  .detalle-receta-card {
+    max-width: 100%;
+    padding: 24px 24px;
+  }
+
+  .detalle-receta-card-title h2 {
+    font-size: 22px;
+  }
+
+  .detalle-receta-bottom-nav {
+    left: 0;
+    transform: none;
+    max-width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .detalle-receta-container {
+    padding: 18px 16px 110px;
+  }
+
+  .detalle-receta-logo {
+    font-size: 22px;
+  }
+
+  .detalle-receta-logo span {
+    font-size: 25px;
+  }
+
+  .detalle-receta-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .detalle-receta-title-section h1 {
+    font-size: 22px;
+  }
+
+  .detalle-receta-back {
+    font-size: 15px;
+  }
+
+  .detalle-receta-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .detalle-receta-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .detalle-receta-card-title h2 {
+    font-size: 21px;
+  }
+
+  .detalle-receta-card-title p {
+    font-size: 15px;
+  }
+
+  .detalle-receta-row ion-icon {
+    font-size: 22px;
+  }
+
+  .detalle-receta-label {
+    font-size: 14px;
+  }
+
+  .detalle-receta-value {
+    font-size: 15px;
+  }
+
+  .detalle-receta-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detalle-receta-qr {
+    align-self: flex-start;
+  }
+
+  .detalle-receta-qr ion-icon {
+    font-size: 54px;
+  }
+
+  .detalle-receta-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .detalle-receta-download-button,
+  .detalle-receta-share-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .detalle-receta-nav-item {
+    font-size: 11px;
+  }
+
+  .detalle-receta-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .detalle-receta-title-section h1 {
+    font-size: 21px;
+  }
+
+  .detalle-receta-card-title h2 {
+    font-size: 19px;
+  }
+
+  .detalle-receta-label {
+    font-size: 13px;
+  }
+
+  .detalle-receta-value {
+    font-size: 14px;
+  }
+
+  .detalle-receta-nav-item {
+    font-size: 10px;
+  }
+
+  .detalle-receta-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

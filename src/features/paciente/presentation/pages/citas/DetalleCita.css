@@ -1,0 +1,558 @@
+.detalle-cita-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.detalle-cita-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.detalle-cita-container {
+  min-height: 100vh;
+  padding: 24px 24px 120px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.detalle-cita-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.detalle-cita-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.detalle-cita-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.detalle-cita-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.detalle-cita-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detalle-cita-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Volver */
+
+.detalle-back-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 22px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detalle-back-row ion-icon {
+  font-size: 22px;
+}
+
+.detalle-back-row:hover {
+  color: var(--clinic-primary, #00a896);
+  transform: translateX(-2px);
+}
+
+/* Título */
+
+.detalle-title-section {
+  margin-top: 24px;
+  margin-bottom: 22px;
+}
+
+.detalle-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Card principal */
+
+.detalle-main-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 18px;
+  padding: 28px 30px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+}
+
+.detalle-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.detalle-card-header h2 {
+  margin: 0;
+  color: var(--clinic-text, #174c47);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.detalle-card-header span {
+  background: var(--clinic-primary-dark, #007f73);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Doctor */
+
+.detalle-doctor-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.detalle-avatar {
+  width: 76px;
+  height: 76px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 128, 115, 0.12);
+}
+
+.detalle-avatar ion-icon {
+  font-size: 58px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.detalle-doctor-row h3 {
+  margin: 0;
+  color: var(--clinic-text, #174c47);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.detalle-doctor-row p {
+  margin: 4px 0 0;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Info resumen */
+
+.detalle-info-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.detalle-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.detalle-info-item ion-icon {
+  font-size: 26px;
+  color: var(--clinic-primary, #00a896);
+  flex-shrink: 0;
+}
+
+.detalle-info-item span {
+  display: block;
+  font-size: 13px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-weight: 800;
+}
+
+.detalle-info-item p {
+  margin: 3px 0 0;
+  color: var(--clinic-text, #174c47);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* Información adicional */
+
+.detalle-extra-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  padding: 26px 30px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.08);
+}
+
+.detalle-extra-card h2 {
+  margin: 0 0 20px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.detalle-extra-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.detalle-extra-item:last-child {
+  border-bottom: none;
+}
+
+.detalle-extra-item ion-icon {
+  font-size: 24px;
+  color: var(--clinic-primary, #00a896);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.detalle-extra-item span {
+  display: block;
+  color: var(--clinic-muted, #6b7c7a);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.detalle-extra-item p {
+  margin: 4px 0 0;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Acciones */
+
+.detalle-actions {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.detalle-join-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 42px;
+  min-width: 170px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.detalle-cancel-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --border-radius: 10px;
+  --background: transparent;
+
+  height: 42px;
+  min-width: 150px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Espacio inferior */
+
+.detalle-cita-bottom-space {
+  height: 130px;
+}
+
+/* Bottom nav */
+
+.detalle-cita-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.detalle-cita-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.detalle-cita-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.detalle-cita-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.detalle-cita-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .detalle-cita-container {
+    padding: 20px 18px 120px;
+    max-width: 100%;
+  }
+
+  .detalle-title-section h1 {
+    font-size: 24px;
+  }
+
+  .detalle-main-card,
+  .detalle-extra-card,
+  .detalle-actions {
+    max-width: 100%;
+  }
+
+  .detalle-main-card {
+    padding: 24px 24px;
+  }
+
+  .detalle-extra-card {
+    padding: 24px 24px;
+  }
+
+  .detalle-cita-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .detalle-cita-container {
+    padding: 18px 16px 120px;
+  }
+
+  .detalle-cita-logo {
+    font-size: 22px;
+  }
+
+  .detalle-cita-logo span {
+    font-size: 25px;
+  }
+
+  .detalle-cita-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .detalle-back-row {
+    font-size: 15px;
+  }
+
+  .detalle-title-section {
+    margin-top: 22px;
+  }
+
+  .detalle-title-section h1 {
+    font-size: 22px;
+  }
+
+  .detalle-main-card {
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .detalle-card-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .detalle-card-header h2 {
+    font-size: 21px;
+  }
+
+  .detalle-doctor-row {
+    align-items: center;
+    gap: 14px;
+  }
+
+  .detalle-avatar {
+    width: 66px;
+    height: 66px;
+  }
+
+  .detalle-avatar ion-icon {
+    font-size: 50px;
+  }
+
+  .detalle-doctor-row h3 {
+    font-size: 19px;
+  }
+
+  .detalle-info-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .detalle-info-item {
+    padding: 13px 14px;
+  }
+
+  .detalle-info-item ion-icon {
+    font-size: 24px;
+  }
+
+  .detalle-info-item p {
+    font-size: 14px;
+  }
+
+  .detalle-extra-card {
+    margin-top: 22px;
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .detalle-extra-card h2 {
+    font-size: 21px;
+  }
+
+  .detalle-extra-item {
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .detalle-extra-item ion-icon {
+    font-size: 22px;
+  }
+
+  .detalle-extra-item span {
+    font-size: 13px;
+  }
+
+  .detalle-extra-item p {
+    font-size: 14px;
+  }
+
+  .detalle-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .detalle-join-button,
+  .detalle-cancel-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .detalle-cita-nav-item {
+    font-size: 11px;
+  }
+
+  .detalle-cita-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .detalle-title-section h1 {
+    font-size: 21px;
+  }
+
+  .detalle-card-header h2 {
+    font-size: 19px;
+  }
+
+  .detalle-info-item span,
+  .detalle-extra-item span {
+    font-size: 12px;
+  }
+
+  .detalle-info-item p,
+  .detalle-extra-item p {
+    font-size: 13px;
+  }
+
+  .detalle-cita-nav-item {
+    font-size: 10px;
+  }
+
+  .detalle-cita-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

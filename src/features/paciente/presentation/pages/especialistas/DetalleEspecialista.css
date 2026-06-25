@@ -1,0 +1,534 @@
+.detalle-especialista-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.detalle-especialista-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.detalle-especialista-container {
+  min-height: 100vh;
+  padding: 24px 24px 120px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.detalle-especialista-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.detalle-especialista-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.detalle-especialista-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.detalle-especialista-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.detalle-especialista-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detalle-especialista-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Volver */
+
+.detalle-especialista-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 22px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detalle-especialista-back ion-icon {
+  font-size: 22px;
+}
+
+.detalle-especialista-back:hover {
+  color: var(--clinic-primary, #00a896);
+  transform: translateX(-2px);
+}
+
+/* Título */
+
+.detalle-especialista-title-section {
+  margin-top: 24px;
+  margin-bottom: 22px;
+}
+
+.detalle-especialista-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Card principal */
+
+.detalle-especialista-main-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 18px;
+  padding: 28px 30px;
+
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  align-items: center;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+}
+
+.detalle-especialista-img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 12px rgba(0, 128, 115, 0.16);
+}
+
+.detalle-especialista-main-info h2 {
+  margin: 0 0 4px;
+  color: var(--clinic-text, #174c47);
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.detalle-especialista-main-info h3 {
+  margin: 0 0 10px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.detalle-especialista-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.detalle-especialista-rating ion-icon {
+  font-size: 19px;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.detalle-especialista-description {
+  margin: 0;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Card información */
+
+.detalle-especialista-info-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  padding: 26px 30px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.08);
+}
+
+.detalle-especialista-info-card h2 {
+  margin: 0 0 20px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.detalle-especialista-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.detalle-especialista-info-item:last-child {
+  border-bottom: none;
+}
+
+.detalle-especialista-info-item ion-icon {
+  font-size: 24px;
+  color: var(--clinic-primary, #00a896);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.detalle-especialista-info-item span {
+  display: block;
+  color: var(--clinic-muted, #6b7c7a);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.detalle-especialista-info-item p {
+  margin: 4px 0 0;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Horarios */
+
+.detalle-especialista-schedule-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+
+  background: #ffffff;
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 18px;
+  padding: 24px 30px;
+
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.06);
+}
+
+.detalle-especialista-schedule-card h2 {
+  margin: 0 0 18px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.detalle-especialista-hours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.detalle-especialista-hour {
+  background: var(--clinic-primary-soft, #d9f8f4);
+  color: var(--clinic-primary-dark, #007f73);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Acciones */
+
+.detalle-especialista-actions {
+  width: 100%;
+  max-width: 1000px;
+  margin: 26px auto 0;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.detalle-especialista-agendar-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 42px;
+  min-width: 160px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.detalle-especialista-back-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --border-radius: 10px;
+  --background: transparent;
+
+  height: 42px;
+  min-width: 160px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Espacio inferior */
+
+.detalle-especialista-bottom-space {
+  height: 130px;
+}
+
+/* Bottom nav */
+
+.detalle-especialista-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.detalle-especialista-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.detalle-especialista-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.detalle-especialista-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.detalle-especialista-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .detalle-especialista-container {
+    padding: 20px 18px 120px;
+    max-width: 100%;
+  }
+
+  .detalle-especialista-title-section h1 {
+    font-size: 24px;
+  }
+
+  .detalle-especialista-main-card,
+  .detalle-especialista-info-card,
+  .detalle-especialista-schedule-card,
+  .detalle-especialista-actions {
+    max-width: 100%;
+  }
+
+  .detalle-especialista-main-card {
+    padding: 24px 24px;
+    grid-template-columns: 95px 1fr;
+  }
+
+  .detalle-especialista-img {
+    width: 92px;
+    height: 92px;
+  }
+
+  .detalle-especialista-info-card,
+  .detalle-especialista-schedule-card {
+    padding: 24px 24px;
+  }
+
+  .detalle-especialista-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .detalle-especialista-container {
+    padding: 18px 16px 120px;
+  }
+
+  .detalle-especialista-logo {
+    font-size: 22px;
+  }
+
+  .detalle-especialista-logo span {
+    font-size: 25px;
+  }
+
+  .detalle-especialista-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .detalle-especialista-back {
+    font-size: 15px;
+  }
+
+  .detalle-especialista-title-section {
+    margin-top: 22px;
+  }
+
+  .detalle-especialista-title-section h1 {
+    font-size: 22px;
+  }
+
+  .detalle-especialista-main-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .detalle-especialista-img {
+    justify-self: center;
+    width: 96px;
+    height: 96px;
+  }
+
+  .detalle-especialista-main-info h2 {
+    font-size: 22px;
+  }
+
+  .detalle-especialista-main-info h3 {
+    font-size: 18px;
+  }
+
+  .detalle-especialista-rating {
+    justify-content: center;
+  }
+
+  .detalle-especialista-description {
+    font-size: 14px;
+  }
+
+  .detalle-especialista-info-card,
+  .detalle-especialista-schedule-card {
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .detalle-especialista-info-card h2,
+  .detalle-especialista-schedule-card h2 {
+    font-size: 21px;
+  }
+
+  .detalle-especialista-info-item {
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .detalle-especialista-info-item ion-icon {
+    font-size: 22px;
+  }
+
+  .detalle-especialista-info-item span {
+    font-size: 13px;
+  }
+
+  .detalle-especialista-info-item p {
+    font-size: 14px;
+  }
+
+  .detalle-especialista-hours {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .detalle-especialista-hour {
+    text-align: center;
+  }
+
+  .detalle-especialista-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .detalle-especialista-agendar-button,
+  .detalle-especialista-back-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .detalle-especialista-nav-item {
+    font-size: 11px;
+  }
+
+  .detalle-especialista-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .detalle-especialista-title-section h1 {
+    font-size: 21px;
+  }
+
+  .detalle-especialista-main-info h2 {
+    font-size: 20px;
+  }
+
+  .detalle-especialista-info-card h2,
+  .detalle-especialista-schedule-card h2 {
+    font-size: 20px;
+  }
+
+  .detalle-especialista-nav-item {
+    font-size: 10px;
+  }
+
+  .detalle-especialista-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

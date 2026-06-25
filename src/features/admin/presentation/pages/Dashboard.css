@@ -1,0 +1,206 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #7debdc;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: #009e8e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.admin-sidebar h1 {
+  font-size: 52px;
+  margin: 0 0 40px 40px;
+}
+
+.sidebar-item {
+  --background: transparent;
+  --color: white;
+  --padding-start: 36px;
+  --inner-padding-end: 36px;
+  --min-height: 64px;
+  --border-width: 0;
+  --inner-border-width: 0;
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-item::part(native) {
+  background: transparent;
+  color: white;
+}
+
+.sidebar-item ion-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.sidebar-item ion-label {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar-item.active {
+  --background: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-item.active::part(native) {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.admin-brand {
+  margin-top: auto;
+  padding: 32px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-header {
+  height: 100px;
+  background: #d8fff8;
+  color: #009e8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+}
+
+.admin-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.admin-avatar {
+  font-size: 38px;
+}
+
+.dashboard-content {
+  padding: 48px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  color: #009e8e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card ion-icon {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.stat-card p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.stat-card h3 {
+  font-size: 38px;
+  margin: 12px 0 0;
+}
+
+.dashboard-chart {
+  margin-top: 40px;
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  color: #009e8e;
+}
+
+.chart-bars {
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.chart-bars div {
+  text-align: center;
+}
+
+.chart-bars span {
+  width: 60px;
+  background: #009e8e;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.chart-bars p {
+  margin-top: 12px;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .admin-layout {
+    display: block;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 24px 0;
+  }
+
+  .admin-sidebar h1 {
+    font-size: 42px;
+    margin: 0 24px 24px;
+  }
+
+  .sidebar-item {
+  --padding-start: 24px;
+  --min-height: 54px;
+  font-size: 18px;
+}
+
+.sidebar-item ion-label {
+  font-size: 18px;
+}
+
+  .admin-brand {
+    padding: 20px 24px 0;
+  }
+
+  .admin-header {
+    height: auto;
+    padding: 24px;
+  }
+
+  .admin-header h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-content {
+    padding: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-bars {
+    gap: 24px;
+    overflow-x: auto;
+  }
+}

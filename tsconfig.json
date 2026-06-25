@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "src/features/admin/presentation/pages/Dashboard.tsx", "src/features/admin/data/especialidadesService.ts", "src/features/admin/data/usuariosService.ts", "src/features/admin/presentation/pages/Usuarios.tsx", "src/features/admin/presentation/pages/Especialidades.tsx", "paciente/presentation/HomePaciente.tsx", "paciente/presentation/Agendar.tsx", "paciente/presentation/Historial.tsx", "src/features/medico/presentation/pages/Consultas.tsx", "src/features/medico/presentation/pages/HomeMedico.tsx", "src/features/medico/presentation/pages/Pacientes.tsx", "src/features/medico/presentation/pages/RecetasMedico.tsx", "paciente/presentation/RecetasPaciente.tsx", "paciente/presentation/Especialistas.tsx", "paciente/data"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

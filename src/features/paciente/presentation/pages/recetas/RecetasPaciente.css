@@ -1,0 +1,457 @@
+.recetas-paciente-content {
+  --background: var(--clinic-bg, #ffffff);
+}
+
+.recetas-paciente-content::part(scroll) {
+  overflow-x: hidden;
+}
+
+.recetas-paciente-container {
+  min-height: 100vh;
+  padding: 24px 24px 110px;
+  color: var(--clinic-primary-dark, #007f73);
+  font-family: Arial, sans-serif;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+.recetas-paciente-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clinic-border, #d7e4e2);
+}
+
+.recetas-paciente-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--clinic-accent, #67e8dc);
+}
+
+.recetas-paciente-logo span {
+  color: var(--clinic-primary, #00a896);
+  margin-left: 2px;
+  font-size: 28px;
+}
+
+.recetas-paciente-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 30px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.recetas-paciente-icons ion-icon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.recetas-paciente-icons ion-icon:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+/* Título */
+
+.recetas-paciente-title-section {
+  margin-top: 34px;
+  margin-bottom: 20px;
+}
+
+.recetas-paciente-title-section h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+/* Filtros */
+
+.recetas-paciente-filters-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--clinic-surface, #f5f7f7);
+  border: 1px solid var(--clinic-border, #d7e4e2);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 128, 115, 0.08);
+}
+
+.recetas-paciente-search-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 54px;
+  padding: 0 20px;
+  background: #eeeeee;
+  border-bottom: 3px solid #ffffff;
+  color: #111111;
+}
+
+.recetas-paciente-search-box ion-icon {
+  font-size: 26px;
+  color: #111111;
+}
+
+.recetas-paciente-search-input {
+  --color: #333333;
+  --placeholder-color: #777777;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.recetas-paciente-filter-option {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: #eeeeee;
+}
+
+.recetas-paciente-filter-option.active {
+  background: #dcdcdc;
+  margin: 0 14px 12px;
+  border-radius: 10px;
+}
+
+.recetas-paciente-filter-option ion-select {
+  width: 100%;
+  color: #666666;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Lista recetas */
+
+.recetas-paciente-list {
+  width: 100%;
+  max-width: 1000px;
+  margin: 42px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.receta-paciente-card {
+  background: var(--clinic-primary-card, #bff3ec);
+  border: 1px solid var(--clinic-primary, #00a896);
+  border-radius: 18px;
+  padding: 26px 30px;
+  box-shadow: 0 6px 18px rgba(0, 128, 115, 0.12);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.receta-paciente-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.receta-paciente-card-header h2 {
+  margin: 0 0 6px;
+  color: var(--clinic-text, #174c47);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.receta-paciente-card-header span {
+  display: inline-block;
+  background: var(--clinic-primary-dark, #007f73);
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.receta-qr-icon {
+  color: #000000;
+  font-size: 52px;
+  justify-self: end;
+}
+
+.receta-paciente-info {
+  color: var(--clinic-primary-dark, #007f73);
+}
+
+.receta-paciente-info p {
+  margin: 7px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.receta-paciente-info ion-icon {
+  font-size: 19px;
+  color: var(--clinic-primary, #00a896);
+}
+
+.receta-paciente-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.ver-receta-button {
+  --background: var(--clinic-primary-dark, #007f73);
+  --background-hover: #00685f;
+  --color: #ffffff;
+  --border-radius: 10px;
+
+  height: 40px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: none;
+  min-width: 125px;
+}
+
+.descargar-receta-button {
+  --border-color: var(--clinic-primary-dark, #007f73);
+  --color: var(--clinic-primary-dark, #007f73);
+  --border-radius: 10px;
+  --background: transparent;
+
+  height: 40px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: none;
+  min-width: 125px;
+}
+
+/* Espacio inferior */
+
+.recetas-paciente-bottom-space {
+  height: 120px;
+}
+
+/* Bottom nav */
+
+.recetas-paciente-bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1180px;
+  height: 82px;
+
+  background: #ffffff;
+  border-top: 1px solid var(--clinic-border, #d7e4e2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.recetas-paciente-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  width: 20%;
+  transition: 0.2s ease;
+}
+
+.recetas-paciente-nav-item ion-icon {
+  font-size: 30px;
+}
+
+.recetas-paciente-nav-item:hover {
+  color: var(--clinic-primary-dark, #007f73);
+  transform: translateY(-1px);
+}
+
+.recetas-paciente-nav-item.active {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .recetas-paciente-container {
+    padding: 20px 18px 110px;
+    max-width: 100%;
+  }
+
+  .recetas-paciente-title-section {
+    margin-top: 32px;
+  }
+
+  .recetas-paciente-title-section h1 {
+    font-size: 24px;
+  }
+
+  .recetas-paciente-filters-card,
+  .recetas-paciente-list {
+    max-width: 100%;
+  }
+
+  .receta-paciente-card {
+    padding: 24px 24px;
+    gap: 18px;
+  }
+
+  .receta-paciente-card-header h2 {
+    font-size: 22px;
+  }
+
+  .receta-qr-icon {
+    font-size: 48px;
+  }
+
+  .recetas-paciente-bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Móvil */
+
+@media (max-width: 430px) {
+  .recetas-paciente-container {
+    padding: 18px 16px 110px;
+  }
+
+  .recetas-paciente-logo {
+    font-size: 22px;
+  }
+
+  .recetas-paciente-logo span {
+    font-size: 25px;
+  }
+
+  .recetas-paciente-icons {
+    font-size: 26px;
+    gap: 14px;
+  }
+
+  .recetas-paciente-title-section h1 {
+    font-size: 22px;
+  }
+
+  .recetas-paciente-filters-card {
+    border-radius: 12px;
+  }
+
+  .recetas-paciente-search-box {
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .recetas-paciente-filter-option {
+    min-height: 54px;
+    padding: 0 16px;
+  }
+
+  .recetas-paciente-filter-option.active {
+    margin: 0 10px 10px;
+  }
+
+  .recetas-paciente-list {
+    margin-top: 34px;
+    gap: 18px;
+  }
+
+  .receta-paciente-card {
+    grid-template-columns: 1fr;
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .receta-paciente-card-header {
+    align-items: flex-start;
+  }
+
+  .receta-paciente-card-header h2 {
+    font-size: 21px;
+  }
+
+  .receta-qr-icon {
+    justify-self: start;
+    font-size: 44px;
+    margin-top: -8px;
+  }
+
+  .receta-paciente-info p {
+    font-size: 14px;
+  }
+
+  .receta-paciente-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .ver-receta-button,
+  .descargar-receta-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .recetas-paciente-nav-item {
+    font-size: 11px;
+  }
+
+  .recetas-paciente-nav-item ion-icon {
+    font-size: 27px;
+  }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 380px) {
+  .recetas-paciente-title-section h1 {
+    font-size: 21px;
+  }
+
+  .receta-paciente-card {
+    padding: 20px 18px;
+  }
+
+  .receta-paciente-card-header h2 {
+    font-size: 19px;
+  }
+
+  .receta-paciente-info p {
+    font-size: 13px;
+  }
+
+  .recetas-paciente-nav-item {
+    font-size: 10px;
+  }
+
+  .recetas-paciente-nav-item ion-icon {
+    font-size: 25px;
+  }
+}

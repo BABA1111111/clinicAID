@@ -5,28 +5,39 @@ import { Route, Redirect } from 'react-router-dom';
 import '@ionic/react/css/core.css';
 
 /* Auth */
-import Login from './pages/auth/Login';
-import Register from './pages/auth/Register';
+import Login from './features/auth/presentation/pages/Login';
+import Register from './features/auth/presentation/pages/Register';
 
 /* Paciente */
-import HomePaciente from './pages/paciente/HomePaciente';
-import Agendar from './pages/paciente/Agendar';
-import Historial from './pages/paciente/Historial';
-import RecetasPaciente from './pages/paciente/RecetasPaciente';
+import Agendar from './features/paciente/presentation/pages/citas/Agendar';
+import DetalleCita from './features/paciente/presentation/pages/citas/DetalleCita';
+
+import Historial from './features/paciente/presentation/pages/historial/Historial';
+import DetalleHistorial from './features/paciente/presentation/pages/historial/DetalleHistorial';
+
+import HomePaciente from './features/paciente/presentation/pages/HomePaciente';
+import PerfilPaciente from './features/paciente/presentation/pages/PerfilPaciente';
+
+import Especialistas from './features/paciente/presentation/pages/especialistas/Especialistas';
+import DetalleEspecialista from './features/paciente/presentation/pages/especialistas/DetalleEspecialista';
+import ConsultarEspecialista from './features/paciente/presentation/pages/especialistas/ConsultarEspecialista';
+
+import RecetasPaciente from './features/paciente/presentation/pages/recetas/RecetasPaciente';
+import DetalleReceta from './features/paciente/presentation/pages/recetas/DetalleReceta';
 
 /* Médico */
-import HomeMedico from './pages/medico/HomeMedico';
-import Consultas from './pages/medico/Consultas';
-import Pacientes from './pages/medico/Pacientes';
-import RecetasMedico from './pages/medico/RecetasMedico';
+import HomeMedico from './features/medico/presentation/pages/HomeMedico';
+import Consultas from './features/medico/presentation/pages/Consultas';
+import Pacientes from './features/medico/presentation/pages/Pacientes';
+import RecetasMedico from './features/medico/presentation/pages/RecetasMedico';
 
 /* Admin */
-import Dashboard from './pages/admin/Dashboard';
-import Usuarios from './pages/admin/Usuarios';
-import Especialidades from './pages/admin/Especialidades';
+import Dashboard from './features/admin/presentation/pages/Dashboard';
+import Usuarios from './features/admin/presentation/pages/Usuarios';
+import Especialidades from './features/admin/presentation/pages/Especialidades';
 
 /* Protected Route */
-import ProtectedRoute from './routes/ProtectedRoute';
+import ProtectedRoute from './core/routes/ProtectedRoute';
 
 const App: React.FC = () => {
   return (
@@ -38,7 +49,7 @@ const App: React.FC = () => {
           {/* Públicas */}
           <Route path="/login" component={Login} exact />
           <Route path="/register" component={Register} exact />
-
+          
           {/* Paciente */}
           <ProtectedRoute
             path="/paciente/home"
@@ -62,8 +73,57 @@ const App: React.FC = () => {
           />
 
           <ProtectedRoute
+            path="/paciente/historial/detalle"
+            component={DetalleHistorial}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
             path="/paciente/recetas"
             component={RecetasPaciente}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/recetas/detalle"
+            component={DetalleReceta}
+            exact
+            allowedRoles={['paciente']}
+          />          
+
+          <ProtectedRoute
+            path="/paciente/especialistas"
+            component={Especialistas}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/especialistas/detalle"
+            component={DetalleEspecialista}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/especialistas/consultar"
+            component={ConsultarEspecialista}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/perfil"
+            component={PerfilPaciente}
+            exact
+            allowedRoles={['paciente']}
+          />
+
+          <ProtectedRoute
+            path="/paciente/cita/detalle"
+            component={DetalleCita}
             exact
             allowedRoles={['paciente']}
           />
